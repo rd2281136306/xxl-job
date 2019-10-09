@@ -244,7 +244,7 @@ Source code is organized by maven,unzip it and structure is as follows:
 #### Step 1:Configure Schedule Center
 Configure file’s path of schedule center is as follows:
 
-    /xxl-job/xxl-job-admin/src/main/resources/xxl-job-admin.properties
+    /xxl-job/xxl-job-admin/src/main/resources/application.properties
 
 
 The concrete contet describe as follows:
@@ -565,7 +565,7 @@ It is implemented by interrupt execute thread, it will trigger InterruptedExcept
 So if you want stop the running task ,the JobHandler need to handle InterruptedException separately by throw this exception.the right logic is as shown below:
 ```
 try{
-    // TODO
+    // do something
 } catch (Exception e) {
     if (e instanceof InterruptedException) {
         throw e;
